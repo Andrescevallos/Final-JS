@@ -1,0 +1,730 @@
+body{
+    background: grey;
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    margin: 50px 0;
+    padding: 30px 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: pink;
+    border-radius: 20px;
+
+}
+
+.funco-mpra{
+    width: 300px;
+    height: 100px;
+}
+
+.head1{
+    display: flex;
+}
+
+.bu-search{
+    border: solid 1px rgba(0, 0, 0, 0.904);
+    border-radius: 5px;
+    background-color: pink;
+    padding: 5px;
+}
+
+.bu-search:hover{
+    background: pink;
+    border: solid 1px rgba(0, 0, 0, 0.904);
+}
+
+.ba-search{
+    border: solid 1px rgba(0, 0, 0, 0.904);
+    border-radius: 5px;
+    margin-right: 15px;
+    background-color: pink;
+    padding: 5px;
+    color: black;
+}
+
+.nav-search{
+    border: solid 1px rgba(0, 0, 0, 0.904);
+    padding: 10px 5px ;
+    border-radius: 1rem;
+    background-color: rgb(227, 142, 156);
+}
+.head2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.orden-head3{
+    display: flex;
+    padding-right: 10px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.head3{
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+}
+
+.head3 a, .dropdown button, .btnLogin{
+    color: black;
+    padding-top: 6px;
+}
+.head3 a:hover, .marcas button:hover, .btnLogin:hover{
+    transform: scale(1.2);
+}
+
+
+.head4{
+    display: flex;
+    justify-content: space-around;
+}
+
+.logos{
+    width: 100px;
+    height: 70px;
+}
+
+.orden-logos{
+    display: flex;
+}
+
+.productos{
+    border: none;
+    background: none;
+    color: blue;
+
+}
+
+.nombre_redes{  
+    display: block;
+    opacity: 0;
+}
+
+.r-facebook, .r-twitter, .r-instagram, .r-youtube, .r-carrito, .r-propina{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 25px;
+}
+
+.fa-twitter{
+    color:rgb(38, 184, 241);
+}
+
+.fa-instagram{
+    color:rgb(255, 0, 234)
+}
+
+.fa-youtube{
+    color:rgb(255, 0, 0)
+}
+
+.fa-cart-shopping{
+    color:rgb(0, 255, 0)
+}
+
+.fa-lightbulb{
+    color:rgb(251, 255, 0)
+}
+
+
+.fa-facebook:hover,.fa-twitter:hover, .fa-instagram:hover,.fa-youtube:hover,.fa-cart-shopping:hover,.fa-lightbulb:hover    {
+    transform: scale(1.4);
+}
+
+
+/******************** PROMO 1*********************/
+.btnIzq, .btnDer{
+    border: solid rgb(255, 255, 255) 3px;
+    width: 50px;
+    height: 100px;
+    border-radius: 15px;
+    background: pink;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 12px;
+    font-size: 50px;
+    
+}
+.promo{
+    margin: 50px 100px;
+}
+
+.promouno{
+    display: flex;
+    justify-content: space-around;
+    height: 600px;
+    width: 85,5%;
+}
+.promouno-dos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.promodos{
+    background: rgb(5, 139, 0);
+}
+
+.promotres{
+    background: rgb(0, 58, 139);
+}
+
+.messiarg{
+    width: 500px;
+    height: 650px;
+}
+
+.estrella{
+    width: 60%;
+    margin-left: 100px;
+}
+
+.bannercampeon{
+    display: flex;
+    flex-direction: column  ;
+}
+.bannercampeon :nth-child(1){
+    font-size: 30px ;
+    text-align: center;
+}
+
+.bannercampeon :nth-child(2){
+    font-size: 70px ;
+    text-align: center;
+}
+
+/*************************** PROMO 2******************************************/
+.promodos{
+    height: 600px;
+    width: 85,5%;
+    background: none;
+}
+.imgPromo2-1{
+    width: 220px;
+    height: 220px;
+}
+
+.imgPromo2-2{
+    width: 290px;
+    height: 290px;
+}
+
+.bannerPromoDos{
+    display: flex;
+    flex-direction: column;
+    padding-left: 125px;
+    font-size: 45px;
+}
+
+.divPromoDos{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*************************** PROMO 3******************************************/
+.divPromoTres{
+    background: linear-gradient(to top, blue, orange,brown, lightblue);
+    height: 600px;
+    width: 85,5%;
+    display: flex;
+    padding-left: 20px;
+    border-radius: 15px;
+}
+
+
+.eevee{
+    width: 500px;
+    height: 500px;
+}
+
+.banerPromo3{
+    display: flex;
+    flex-direction: column;
+    padding: 80px 100px;
+}
+
+.banerPromo3 span{
+    font-size: 30px;
+}
+
+.promoTresAnimales{
+    width: 650px;
+    height: 250px;
+    padding-right: 50px;
+}
+/*****************************************************************************************************************/
+
+.divFunkos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ordenCard{
+    margin-bottom: 2rem;
+    border: solid pink 3px;
+    width: 250px;
+    border-radius: 15px;
+    background: white;
+}
+
+.ordenInt{
+    padding: 15px 0 5px 30px;
+}
+
+.imgFunkos{
+    width: 150px;
+    height: 150px;
+}
+
+.masMenos{
+    display: flex;    
+    justify-content: space-between ;
+    width: 100px;
+}
+
+.masMenos button{
+    border: none;
+    background: none;
+
+}
+
+.masMenos p{
+    margin-top: 12px;
+}
+
+
+.btnSumar, .btnRestar{
+    border: solid black 2px;
+    padding: 6px;
+    background: pink;
+    border-radius: 5px;
+}
+.btnLimpiarCarrito{
+    background: pink;
+    color: black;
+}
+.btnFinalizar:hover{
+    background: pink;
+    color: white;
+    border: solid black 1px;
+}
+.btnFinalizar{
+    background:rgb(253, 147, 165) ;
+    border: solid black 1px;
+}
+.btnEliminar:hover, .btnSumar:hover, .btnRestar:hover, .btnLimpiarCarrito:hover{
+
+    background: rgb(253, 147, 165);
+
+}
+.ordenIntCarrito{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px ;
+    width: 400px;
+
+}
+
+.ordenIntCarrito h5{
+    padding-top: 13px;
+}
+
+.ordenIntCarrito h6{
+    padding-top: 15px;
+}
+
+/*************************************************/
+.divCarrito{
+    display: flex;
+    flex-direction: column;
+}
+
+.imgFunkosCarrito{
+    width: 50px;
+    height: 50px;
+}
+
+.tamañoCarrito{
+    height: max-content;
+}
+
+.ordenCardCarrito{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.btnEliminar{
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    background: pink;
+}
+
+.posiCarrito{
+    position: fixed;
+    top: 40%;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: pink ;
+}
+
+.posiCarrito i{
+    color: black;
+}
+
+.montoFinal{
+    display: flex;
+    flex-direction: column;
+}
+
+.imgFunkosbus{
+    width: 120px;
+    height: 120px;
+}
+
+
+.buscadoOrden{
+    display: flex;
+    flex-direction: column;
+    margin: 30 px 30px;
+
+}
+
+.divCalculo{
+    border: solid rgb(48, 19, 193) 2px;
+
+}
+
+.headerCarrito{
+    display: flex;
+    justify-content: space-evenly;
+}
+.ordenDolar{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Criptoya{
+    border: solid white 2px;
+    width: 300px;
+    margin: 0;
+}
+
+.totalGastado{
+    border: solid black 2px;
+    width: 300px;
+
+}
+.cantidadEnCarrito{
+    border: solid red 2px;
+    width: 300px;
+
+}
+
+.Calculadora{
+    border: solid green 2px;
+text-align: center;
+}
+.dolar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnFiltros{
+    display: flex;
+
+    background: none;
+    color: rgb(0, 0, 0);
+    border: none;
+}
+
+
+
+.filtros{
+    display: flex;
+}   
+
+
+.filtros div{
+    padding: 5px;
+    border-radius: 5px;
+}
+.nombre{
+    color: red;
+}
+
+.precio{
+    color: green;
+}
+
+.productora{
+    color: black;
+}
+
+
+.nombre:hover{
+    color: rgb(0, 0, 0);
+    width: 140px;
+    background: rgb(245, 43, 43);
+}
+
+.precio:hover{
+    color: rgb(0, 0, 0);
+    width: 140px;
+    background: rgb(62, 230, 62);
+}
+
+.productora:hover{
+    color: rgb(255, 255, 255);
+    width: 140px;
+    background: rgb(0, 0, 0);
+}
+.ordenNombre{
+    border: red solid 2px;
+}
+
+.ordenPrecio{
+    border: green solid 2px;
+
+}
+
+.ordenProductora{
+    border: black solid 2px;}
+
+
+.ordenFiltros{
+    display: flex;
+    justify-content: end;
+    margin: 50px 130px 15px 0px;
+
+}
+
+
+
+.btnFiltro{
+    border: rgb(255, 0, 247) solid 2px;
+    margin-bottom: 15px
+}
+
+
+.btnFiltro:hover{
+    border: rgb(0, 0, 0) solid 2px;
+    background: rgb(255, 0, 247) ;  
+}
+
+.divCant{
+    display: flex;
+}
+
+.btnAgregar{
+    background: pink ;
+    border-radius: 10px;
+}
+
+.fondo{
+background: linear-gradient(to left,grey, pink, grey);
+position: relative;
+
+}
+
+/*************************************/
+
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    border: black;
+    box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb{
+
+    background: pink;
+    border-radius: 10px;
+    
+}
+
+
+.paginas{
+    display: flex;
+    justify-content: center;
+
+}
+
+.colPag{
+    color: black;
+    background: pink;
+    border: solid black 1px;
+}
+
+.colPag:hover{
+    color: pink;
+    background: black;
+    border: solid pink 1px;
+}
+
+.botonarriba{
+        background-color: pink;
+        color: white;
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        border-radius: 100%;
+        position: fixed;
+        top: 90%;
+        right: 0;
+        line-height: 40px;
+        border: solid rgb(255, 255, 255);
+        font-size: x-large;
+    
+    }
+.botonarriba:hover{
+    background-color: rgb(255, 108, 132);
+
+
+}
+.botonarriba i{
+    color: white;
+}
+
+/********************************************/
+
+
+
+/*        FINALIZAR COMPRA              */
+.finalizarFondo{
+    background: linear-gradient(to left,grey, pink, grey);
+
+}
+.contenedorTarjeta{
+    display: flex;
+    margin-top: 50px;
+}
+
+.detalle{
+    margin-bottom: 20px;
+}
+.formTarjeta{
+    display: flex;
+}
+.tarjeta{
+    position: relative;
+    width: 450px;
+    height: 250px;
+    border: solid black 1px;
+    background: rgb(218, 92, 92);
+    border-radius: 15px;
+    margin-right: 100px;
+}
+
+
+.nombreTitular{
+    position: absolute;
+    left: 20px;
+    bottom: 90px;
+
+}
+
+.fechaVec{
+    position: absolute;
+    left: 20px;
+    bottom: 55px;
+
+
+}
+
+.numTarj{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.codigoSeg{
+    position: absolute;
+    left: 200px;
+    bottom: 20px;
+}
+
+.imgTarjeta{
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    border: solid black 1px;
+    border-radius: 10px;
+    background-color: white;
+    top: 20px;
+    right: 30px;
+
+}
+
+.datos{
+    display: flex;
+}
+
+.datosPersonales{
+    margin-right: 15px;
+}
+
+.ordenFecha{
+    display: flex;
+}
+
+
+
+/******** ASINCRONICO**********/
+
+
+.imgUno{
+    width: 200px;
+    height: 200px;
+}
+
+/*****************LOGIN/REGISTRO**********************/
+.ordenRegistro{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.imgLogin{
+    width: 150px;
+    height: 150px;
+}
+.problema{
+    display: flex;
+    flex-direction: column;
+}
+
+.divCheck{
+    display: flex;
+}
+
+.ordenLogin{
+    display: flex;
+    justify-content:center;
+}
+
+.contimgLogin{
+    margin-top: 50px;
+    align-items: center;
+
+}
+
+
+
