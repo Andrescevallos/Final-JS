@@ -97,6 +97,7 @@ const agregarAlCarrito = (id) =>{
         precioEnDolares()
         cantidadFunkos()
         dolarOficial()
+        dolarBlue()
     }
     else{
         const noEncontrado = arrayFunkos.find(funko => funko.id === id)
@@ -106,6 +107,7 @@ const agregarAlCarrito = (id) =>{
         precioEnDolares()
         cantidadFunkos()
         dolarOficial()
+        dolarBlue()
 
     }
     
@@ -169,6 +171,8 @@ const eliminarDelCarrito = (id) =>{
     precioEnDolares()
     toastiEliminadp()
     cantidadFunkos()
+    dolarOficial()
+        dolarBlue()
     localStorage.setItem("carrito", JSON.stringify(carrito))
 
     
@@ -182,6 +186,8 @@ const restarUno = (id) =>{
         totalCompra()
         precioEnDolares()
         cantidadFunkos()
+        dolarOficial()
+        dolarBlue()
         
     }
     else{
@@ -190,6 +196,8 @@ const restarUno = (id) =>{
         totalCompra()
         precioEnDolares()
         cantidadFunkos()
+        dolarOficial()
+        dolarBlue()
         
     }
     localStorage.setItem("carrito", JSON.stringify(carrito))
@@ -204,6 +212,8 @@ const sumarUno = (id) =>{
         totalCompra()
         toastiAgregardo()
         cantidadFunkos()
+        dolarOficial()
+        dolarBlue()
         localStorage.setItem("carrito", JSON.stringify(carrito))
     
 }
@@ -221,6 +231,8 @@ const vaciarCarrito = () =>{
     totalCompra()
     precioEnDolares()
     cantidadFunkos()
+    dolarOficial()
+        dolarBlue()
     localStorage.clear()
 }
 
@@ -547,14 +559,32 @@ const cantidadFunkos = () =>{
 const dolarOficial = () =>{
     let totalCantidad = carrito.reduce((acumulador, funko) =>acumulador +funko.cantidad, 0)
     let totalPrecio = carrito.reduce((acumulador, funko) =>acumulador +funko.precio, 0)
-    let dolar = `${oficial}`
 
-    cantidadOficial.innerHTML = `${totalCantidad} * ${totalPrecio} *${dolar}`
+    const totatOficial = totalCantidad * totalPrecio
+
+    cantidadOficial.innerHTML = `${totatOficial}`
 
     
+    console.log(totalCantidad)
+    console.log(totalPrecio)
 
 }
 
+const dolarBlue = () =>{
+    let totalCantidad = carrito.reduce((acumulador, funko) =>acumulador +funko.cantidad, 0)
+    let totalPrecio = carrito.reduce((acumulador, funko) =>acumulador +funko.precio, 0)
+
+    const totatOficial = totalCantidad * totalPrecio
+
+    cantidadBlue.innerHTML = `${totatOficial}`
+
+    
+    console.log(totalCantidad)
+    console.log(totalPrecio)
+
+}
+
+dolarBlue()
 //////////////////////////////  CLIENTE   //////////////////////////////
 
 
