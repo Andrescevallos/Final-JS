@@ -96,8 +96,7 @@ const agregarAlCarrito = (id) =>{
         totalCompra()
         precioEnDolares()
         cantidadFunkos()
-        dolarOficial()
-        dolarBlue()
+        
     }
     else{
         const noEncontrado = arrayFunkos.find(funko => funko.id === id)
@@ -106,8 +105,7 @@ const agregarAlCarrito = (id) =>{
         totalCompra()
         precioEnDolares()
         cantidadFunkos()
-        dolarOficial()
-        dolarBlue()
+        
 
     }
     
@@ -171,8 +169,7 @@ const eliminarDelCarrito = (id) =>{
     precioEnDolares()
     toastiEliminadp()
     cantidadFunkos()
-    dolarOficial()
-        dolarBlue()
+    
     localStorage.setItem("carrito", JSON.stringify(carrito))
 
     
@@ -186,8 +183,7 @@ const restarUno = (id) =>{
         totalCompra()
         precioEnDolares()
         cantidadFunkos()
-        dolarOficial()
-        dolarBlue()
+        
         
     }
     else{
@@ -196,8 +192,7 @@ const restarUno = (id) =>{
         totalCompra()
         precioEnDolares()
         cantidadFunkos()
-        dolarOficial()
-        dolarBlue()
+        
         
     }
     localStorage.setItem("carrito", JSON.stringify(carrito))
@@ -212,8 +207,7 @@ const sumarUno = (id) =>{
         totalCompra()
         toastiAgregardo()
         cantidadFunkos()
-        dolarOficial()
-        dolarBlue()
+        
         localStorage.setItem("carrito", JSON.stringify(carrito))
     
 }
@@ -231,8 +225,7 @@ const vaciarCarrito = () =>{
     totalCompra()
     precioEnDolares()
     cantidadFunkos()
-    dolarOficial()
-        dolarBlue()
+    
     localStorage.clear()
 }
 
@@ -428,11 +421,6 @@ function ordenarPorProductora(){
 }
 
 
-////////////////////////CLENTES///////////////////////////////
-
-
-
-
 
 ///////////////////// TOASTIFY ////////////////////////////
 
@@ -445,10 +433,10 @@ const toastiAgregardo = () =>{
         position: "right", 
         stopOnFocus: true, 
         style: {
-            background: "pink",
+            background: "dodgerblue",
             width: "250px",
             fontSize: "14px",
-            fontFamily: '"Roboto", sans-serif',
+            fontFamily: '"Righteous", cursive',
             fontWeight: "300",
             textAlign: "center",
             borderRadius: "50px",
@@ -466,10 +454,10 @@ const toastiMenos = () =>{
         position: "right", 
         stopOnFocus: true, 
         style: {
-            background: "pink",
+            background: "dodgerblue",
             width: "250px",
             fontSize: "14px",
-            fontFamily: '"Roboto", sans-serif',
+            fontFamily: '"Righteous", cursive',
             fontWeight: "300",
             textAlign: "center",
             borderRadius: "50px",
@@ -487,10 +475,10 @@ const toastiVaciar = () =>{
         position: "right", 
         stopOnFocus: true, 
         style: {
-            background: "pink",
+            background: "dodgerblue",
             width: "250px",
             fontSize: "14px",
-            fontFamily: '"Roboto", sans-serif',
+            fontFamily: '"Righteous", cursive',
             fontWeight: "300",
             textAlign: "center",
             borderRadius: "50px",
@@ -508,10 +496,10 @@ const toastiEliminadp = () =>{
         position: "right", 
         stopOnFocus: true, 
         style: {
-            background: "pink",
+            background: "dodgerblue",
             width: "250px",
             fontSize: "14px",
-            fontFamily: '"Roboto", sans-serif',
+            fontFamily: '"Righteous", cursive',
             fontWeight: "300",
             textAlign: "center",
             borderRadius: "50px",
@@ -532,7 +520,9 @@ const precioEnDolares = () =>{
         fetch(cryptoYa) 
             .then(res => res.json())
             .then(({oficial, blue}) =>{
-                containerCriptoya.innerHTML = `
+                dolarOficial(oficial)
+                dolarBlue(blue)
+                containerCriptoya.innerHTML = `                
                 <p>Oficial: ${oficial}</p>
                 <p>Blue: ${blue}</p>`
             })
@@ -546,9 +536,6 @@ const precioEnDolares = () =>{
 
 const cantidadOficial = document.getElementById("cantidadOficial")
 const cantidadBlue = document.getElementById("cantidadBlue")
-
-
-
 const cantidadEnCarrito = document.getElementById("cantidadEnCarrito")
 
 const cantidadFunkos = () =>{
@@ -556,90 +543,43 @@ const cantidadFunkos = () =>{
     cantidadEnCarrito.innerHTML = `${totalCantidad}`
     }
 
-const dolarOficial = () =>{
-    let totalCantidad = carrito.reduce((acumulador, funko) =>acumulador +funko.cantidad, 0)
-    let totalPrecio = carrito.reduce((acumulador, funko) =>acumulador +funko.precio, 0)
 
-    const totatOficial = totalCantidad * totalPrecio
 
-    cantidadOficial.innerHTML = `${totatOficial}`
+const dolarOficial = (oficial) =>{
+    cantidadOficial.innerHTML = ""
+    let totalCantidad = carrito.reduce((acumulador, funko) =>acumulador + funko.cantidad, 0)
+    let totalPrecio = carrito.reduce((acumulador, funko) =>acumulador + funko.precio, 0)
 
-    
-    console.log(totalCantidad)
-    console.log(totalPrecio)
+    const totalOficial =  (totalPrecio / oficial) * totalCantidad
+    cantidadOficial.innerHTML = `U$S ${totalOficial.toFixed(2)}`
+
 
 }
 
-const dolarBlue = () =>{
+const dolarBlue = (blue) =>{
+    cantidadBlue.innerHTML = ""
     let totalCantidad = carrito.reduce((acumulador, funko) =>acumulador +funko.cantidad, 0)
     let totalPrecio = carrito.reduce((acumulador, funko) =>acumulador +funko.precio, 0)
 
-    const totatOficial = totalCantidad * totalPrecio
-
-    cantidadBlue.innerHTML = `${totatOficial}`
-
-    
-    console.log(totalCantidad)
-    console.log(totalPrecio)
+    const totalBlue =  (totalPrecio / blue) * totalCantidad
+    cantidadBlue.innerHTML = `U$S ${totalBlue.toFixed(2)}`
 
 }
 
-dolarBlue()
-//////////////////////////////  CLIENTE   //////////////////////////////
+  //////     uUN POCO DE SPAM    //////////////////
 
-
-
-
-const registrado = document.getElementById("registrado")
-
-registrado.addEventListener("click", () =>{
+  setTimeout(() =>{
     swal.fire({
-        title: "Ingresa con tus datos",
-        html: `<form id="login"> 
-        <fieldset>
-            <div class="formRegistro">
-                    <div>
-                      <label for="Usuario">Nombre/Usuario</label>
-                      <br>
-                      <input class="inputRegistro" type="text" name="" id="usuario" placeholder="Usuario"> 
-                      <br><br>
-          
-                      <label for="Contraseña">Contraseña</label>
-                      <br>
-                      <input class="inputRegistro"  type="password" name="" id="contraseña" placeholder="Contraseña">
-                      <br><br>
-                      <button id="btnLogin">Entrar</button>
-                      <a href="">Olvidaste tu Contraseña?</a>
-                    </div>
-
-                    <div>
-                      <span>No tenes Usuario??</span>
-                      <a href="./pages/loginRegisto.html">Registrate</a>
-
-                    </div>
-            </div>
-        </fieldset>
-        </form>`
-        
+        html : `<iframe width="560" height="315" src="https://www.youtube.com/embed/_2bVeUi2CFE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+        background: "black",
+        grow: "row"
     })
+  }, 3000)
 
-    const btnLogin = document.getElementById("btnLogin")
-    btnLogin.addEventListener("click", () =>{
-        const usuario = document.getElementById("usuario").value
-        const contraseña = document.getElementById("contraseña").value
-    
-        if(usuario === clientes.usuarioAutorizado && contraseña === clientes.contraseñaAutorizada){
-            swal.fire(`Bienvenido ${cliente.usuarioAutorizado}`)
-        }
-        else{
-            swal.fire("usuario o contraseña incorrecto")
-        }
+
+  setTimeout(() =>{
+    swal.fire({
+        html : `<iframe width="560" height="315" src="https://www.youtube.com/embed/vp-KVSkyklE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+        background: "black",
     })
-})
-
-
-
-
-    
-
-  
+  }, 60000)
